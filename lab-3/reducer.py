@@ -9,7 +9,7 @@ current_count = 0
 word = None
 
 # input comes from STDIN
-for line in sys.stdin :
+for line in sys.stdin:
   # remove leading and trailing white space
   line = line.strip()
   
@@ -33,6 +33,6 @@ for line in sys.stdin :
     current_word = word
     current_count = count
   
-  # do not forget to output the last word if needed !
-  if current_word:
+  # do not forget to output the last word if needed!
+  if current_word == word:
     print '%s\t%s' % (current_word, current_count)
