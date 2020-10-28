@@ -104,4 +104,67 @@ drwxr-xr-x   - cdrault cdrault          0 2020-10-26 17:34 /user/cdrault/data/10
 ```
 
 ## 2. MapReduce2
-TODO
+### 2.3 Python MapReduce Code
+#### 2.3.1 mapper.py
+```python
+#!/ usr/bin/env python
+""" mapper.py """
+
+import sys
+for line in sys. stdin :
+  # remove leading and trailing whitespace
+  line = line.strip()
+  # split the line into words
+  words = line.strip()
+  # increase counters
+for word in words :
+  # write the results to STDOUT ( standard output );
+  # what we output here will be the input for the
+  # Reduce step , i.e. the input for reducer .py
+  #
+  # tab - delimited ; the trivial word count is 1
+  print '%s\t%s' % (word, 1)
+```
+
+#### 2.3.2 reducer.py
+
+```python
+#!/usr/bin/env python
+"""reducer.py"""
+
+from operator import itemgetter
+import sys
+
+current_word = None
+current_count = 0
+word = None
+
+# input comes from STDIN
+for line in sys.stdin :
+  # remove leading and trailing white space
+  line = line.strip()
+  
+  # parse the input we got from mapper.py
+  word, count = line.split('\t', 1)
+  
+  # convert count (currently a string) to int
+  # @TODO
+  try:
+    count = int(count)
+  except ValueError:
+    continue
+  
+  # this IF-switch only works because Hadoop sortsmap output
+  # by key (here: word ) before it is passed to the reducer
+  if current_word == word:
+    current_count += count
+  else:
+    if current_word:
+      print '%s\t%s' % (current_word, current_count)
+    current_word = word
+    current_count = count
+  
+  # do not forget to output the last word if needed !
+  if current_word:
+    print '%s\t%s' % (current_word, current_count)
+```
