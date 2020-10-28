@@ -1,4 +1,4 @@
-# YARN MapReduce2
+# LAB 3 : YARN & MapReduce2
 ## 1. Yarn
 ### 1.2 Wordcount example
 - Connect to Hadoop Cluster
