@@ -1,4 +1,4 @@
-# tp2_drault
+# LAB 2
 
 ## 1.2
 To connect use SSH :
