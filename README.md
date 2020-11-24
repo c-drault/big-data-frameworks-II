@@ -8,5 +8,5 @@ Moodle : https://www.myefrei.fr/moodle/course/view.php?id=7106
   - [answer](lab-3/answer.md) of the lab
   - [subject & repository](https://www.myefrei.fr/moodle/mod/assign/view.php?id=38586) from Moodle
 - [LAB 4](lab-4 "Link to the Lab4") : MapReduce Java
-  - [answer](lab-4/answer.md) of the lab
+  - [answer](https://github.com/c-drault/hadoop-examples-mapreduce) of the lab
   - [subject & repository](https://www.myefrei.fr/moodle/mod/assign/view.php?id=38821) from Moodle
