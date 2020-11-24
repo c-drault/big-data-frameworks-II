@@ -109,12 +109,12 @@ CREATE EXTERNAL TABLE IF NOT EXISTS trees_external (
   VARIETE String,
   OBJECTID String,
   NOM_EV String
-)
+);
 ```
 
 - Create an internal table called `trees_internal`.
 ```console
-CREATE EXTERNAL TABLE IF NOT EXISTS trees_external (
+CREATE TABLE IF NOT EXISTS trees_internal (
   GEOPOINT String,
   ARRONDISSEMENT String, 
   GENRE String,
@@ -128,9 +128,11 @@ CREATE EXTERNAL TABLE IF NOT EXISTS trees_external (
   VARIETE String,
   OBJECTID String,
   NOM_EV String
-)
+);
 ```
 - Import data to the internal table using the external table.
+
+
 - Verify that each table got the same lines count.
 
 ## 1.3 Create queries
