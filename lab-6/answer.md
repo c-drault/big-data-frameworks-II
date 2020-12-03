@@ -370,3 +370,43 @@ hbase(main):006:0> drop 'cdrault:library'
 Took 0.4635 seconds
 ```
 
+### 1.2 Trees
+### 1.2.1 Data insertion
+
+```python
+#trees2hbase.py
+
+from sys import stdin
+from os import getenv
+
+families = {
+    'genre': {'genre':3, 'espece':4, 'famille':5, 'nom_commun':10, 'variete':11},
+    'infos': {'annee_plantation':6, 'hauteur':7, 'circonference':8},
+    'adresse': {'geopoint':1, 'arrondissement':2, 'adresse':9, 'nom_ev':13}
+}
+
+print "create 'cdrault:trees', %s" % (", ".join(["'%s'"%family for family in families]))
+for line in stdin:
+    line = line.strip()
+
+    #Ignoring the first line
+    if not line.startswith('('): continue
+
+    #Each line is broken up into words
+    words = line.split(';')
+    id = "%02d" % int(words[12 - 1])
+
+    #The words are grouped by families and inserted in the table.
+    for family in families:
+        for column in families[family]:
+            number = families[family][column] - 1
+            value = words[number].replace("'","_")
+            if not value: continue
+            print "put 'cdrault:trees', '%s', '%s:%s', '%s'" % (id, family, column, value)
+
+    print "scan cdrault:trees"
+```
+
+```console
+hdfs dfs -cat /user/cdrault/trees.csv | python ./trees2hbase.py | hbase shell
+```
