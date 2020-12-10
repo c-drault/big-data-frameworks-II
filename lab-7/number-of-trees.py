@@ -6,7 +6,7 @@ conf = SparkConf().setAppName(appName)
 sc = SparkContext(conf=conf)
 
 #open file
-file = sc.textFile("hdfs:///user/cdrault/trees.csv")
+file = sc.textFile("hdfs:/user/cdrault/trees.csv")
 
 #Number of line
 number = file.count()
