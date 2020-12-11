@@ -6,8 +6,8 @@ appName = "AverageTreeHeight"
 conf = SparkConf().setAppName(appName)
 sc = SparkContext(conf=conf)
 
-file = sc.textFile("hdfs:/share/paris/arbres.csv")
-trees = file.map(lambda line: Arbre(line))
+file = sc.textFile("hdfs:/user/cdrault/trees.csv")
+trees = file.map(lambda line: Tree(line))
 heights = trees.map(lambda tree: tree.hauteur())
 good_heights = heights.filter(lambda val: val is not None)
 
