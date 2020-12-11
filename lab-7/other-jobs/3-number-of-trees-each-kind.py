@@ -1,10 +1,9 @@
 
 #!/usr/bin/python
-
 from pyspark import SparkConf, SparkContext
 from tree import Tree
 
-appName = "distinctContainingTrees"
+appName = "numberOfTreesEachKind"
 conf = SparkConf().setAppName(appName)
 sc = SparkContext(conf=conf)
 
