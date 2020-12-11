@@ -7,12 +7,20 @@ class Tree(object):
     def __str__(self):
         return "Tree[%s]" % ', '.join(self.data)
 
-    def genre(self):
+    def specie(self):
         if self.data[2] == u'GENRE': return None
         return self.data[2]
 
-    def hauteur(self):
+    def height(self):
+        if self.champs[6] == u'HAUTEUR': return None
         try:
             return float(self.data[6])
+        except:
+            return None
+    
+    def year(self):
+        if self.champs[5] == u'ANNEE PLANTATION': return None
+        try:
+            return int(self.champs[5])
         except:
             return None
