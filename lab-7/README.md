@@ -8,9 +8,6 @@ cdrault> ssh cdrault@hadoop-edge01.efrei.online
 ```
 
 ## 2.Tutorial
-### 2.1 Hints
-#### 2.1.1 Lunch a Spark job
-#### 2.1.2 Write a Python Class
 ### 2.2 Number of trees
 - Execute [number-of-trees.py](number-of-trees.py)
 ```console
