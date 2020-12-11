@@ -46,12 +46,12 @@ cdrault> ssh cdrault@hadoop-edge01.efrei.online
 [cdrault@hadoop-edge01 ~] spark-submit --master=yarn --py-files tree.py other-jobs/5-sort-smaller-tree.py
 ```
 
-- Displays the district where the oldest tree is, [python script](other-job/6-oldest-tree-district.py);
+- Displays the district where the oldest tree is, [python script](other-jobs/6-oldest-tree-district.py);
 ```console
 [cdrault@hadoop-edge01 ~] spark-submit --master=yarn --py-files tree.py other-jobs/6-oldest-tree-district.py
 ```
 
-- Displays the district that contains the most trees, [python script](other-job/7-district-most-trees.py);
+- Displays the district that contains the most trees, [python script](other-jobs/7-district-most-trees.py);
 ```console
 [cdrault@hadoop-edge01 ~] spark-submit --master=yarn --py-files tree.py other-jobs/7-district-most-trees.py
 ```
