@@ -12,4 +12,9 @@ heights = trees.map(lambda tree: tree.hauteur())
 good_heights = heights.filter(lambda val: val is not None)
 
 average = good_heights.sum()/good_heights.count()
+
+#VARIANT :
+#average = good_heights.reduce(lambda a,b: a+b)/good_heights.count()
+#average = good_heights.mean()
+
 print "Average of heights : ",average
