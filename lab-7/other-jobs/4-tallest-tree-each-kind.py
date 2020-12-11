@@ -14,4 +14,4 @@ species = trees.map(lambda tree: (tree.specie(), tree.height()) )
 species_f = species.filter(lambda s,h: s is not None and h is not None)
 
 species_reduce = species_f.reduceByKey(lambda a,b: a if a > b else b)
-print "Species : %s" % (species_reduce.collect())
+print "Species, Height : %s" % (species_reduce.collect())
