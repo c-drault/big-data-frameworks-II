@@ -12,9 +12,13 @@ cdrault> ssh cdrault@hadoop-edge01.efrei.online
 #### 2.1.1 Lunch a Spark job
 #### 2.1.2 Write a Python Class
 ### 2.2 Number of trees
-- Execute python script [number-of-trees.py](number-of-trees.py)
+- Execute [number-of-trees.py](number-of-trees.py)
 ```console
-[cdrault@hadoop-edge01 ~] python number-of-trees.py
+[cdrault@hadoop-edge01 ~] spark-submit --master=yarn number-of-trees.py
 ```
 
-
+### 2.3 Average Tree Height
+- Execute [average-tree-height.py](average-tree-height.py) with the [tree.py](tree.py)
+```console
+[cdrault@hadoop-edge01 ~] spark-submit --master=yarn --py-files tree.py average-tree-height.py
+```
