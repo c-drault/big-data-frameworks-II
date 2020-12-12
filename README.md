@@ -1,7 +1,7 @@
 # Big Data Frameworks II
 
 <p>
-  <img src="https://img.shields.io/static/v1?label=Project&message=School%20Project&color=green">
+  <img src="https://img.shields.io/static/v1?label=Project&message=School%20Labs&color=green">
   <a href="https://www.myefrei.fr/moodle/course/view.php?id=7106">
     <img src="https://img.shields.io/static/v1?label=Subject&message=Big%20Data%20Frameworks%20II&color=green">
   </a>
