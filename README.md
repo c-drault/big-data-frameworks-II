@@ -1,13 +1,10 @@
 # Big Data Frameworks II
-<a href="https://www.myefrei.fr/moodle/course/view.php?id=7106">
-  <img src="https://img.shields.io/static/v1?label=Project&message=School%20Project&color=green">
-</a>
+
+<img src="https://img.shields.io/static/v1?label=Project&message=School%20Project&color=green">
 <a href="https://www.myefrei.fr/moodle/course/view.php?id=7106">
   <img src="https://img.shields.io/static/v1?label=Subject&message=Big%20Data%20Frameworks%20II&color=green">
 </a>
-<a href="https://www.myefrei.fr/moodle/course/view.php?id=7106">
-  <img src="https://img.shields.io/static/v1?label=Years&message=2020-2021&color=red">
-</a>  
+<img src="https://img.shields.io/static/v1?label=Years&message=2020-2021&color=red">
 
 > Github repository of the different labs of the subject.
 
