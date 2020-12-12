@@ -8,7 +8,7 @@
   <img src="https://img.shields.io/static/v1?label=Years&message=2020-2021&color=yellowgreen">
 </p>
 
-> Github repository of the different labs of the subject.
+> Github repository of the different labs of the subject. The first lab was in course without topic.
 
 ## Lab 2 : Before starting Hadoop
 Answer of the lab could be find in [**lab-2**](lab-2) folder the PDF topic could be find on [moodle](https://www.myefrei.fr/moodle/mod/assign/view.php?id=37827)
