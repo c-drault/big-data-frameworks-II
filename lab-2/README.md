@@ -1,4 +1,4 @@
-# LAB 2
+# LAB 2 : Before startgin Hadoop
 
 ## 1.2
 To connect use SSH :
